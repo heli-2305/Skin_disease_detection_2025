@@ -1,124 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skin Disease Detection 2025</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        h1, h2, h3 {
-            color: #2c3e50;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        li {
-            margin-bottom: 5px;
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-        .performance img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
-</head>
-<body>
+🩺 Skin Disease Detection 2025
+This project focuses on developing a deep learning model for the classification of various skin conditions using pretrained Convolutional Neural Networks (CNNs), specifically EfficientNetB0, along with a custom classifier for feature extraction. The primary goal is to assist dermatologists and healthcare professionals by providing an AI-driven, efficient diagnostic tool for identifying skin diseases. 🤖
+The following classes are diagnosed:
+        - 🌟 Light Diseases and Disorders of Pigmentation<br>
+        - 😷 Acne and Rosacea Photos<br>
+        - 🧬 Systemic Disease<br>
+        - 🩸 Vascular Tumors<br>
+        - 🌿 Atopic Dermatitis Photos<br>
+        - 🩹 Bullous Disease Photos<br>
+        - 🍄 Tinea, Ringworm, Candidiasis, and other Fungal Infections<br>
+        - 🔴 Psoriasis Pictures, Lichen Planus, and Related Diseases<br>
+        - 🧪 Melanoma, Skin Cancer, Nevi, and Moles<br>
+        - 🐛 Scabies, Lyme Disease, and other Infestations and Bites<br>
+        - 🧴 Eczema Photos<br>
+        - ⚪ Seborrheic Keratoses and other Benign Tumors<br>
+        - 🔬 Actinic Keratosis, Basal Cell Carcinoma, and other Malignant Lesions<br>
+        - 🩹 Vasculitis Photos<br>
+        - 🦠 Cellulitis, Impetigo, and other Bacterial Infections<br>
 
-    <h1>🩺 Skin Disease Detection 2025</h1>
+🔄 Workflow<br>
+Steps in the Pipeline:<br>
+1) 🗂 Data Preprocessing<br>
+        🧹 Cleaning raw data<br>
+        ❓ Handling missing values<br>
+        🔄 Converting images from BGR → RGB<br>
+2) 🔍 Feature Extraction<br>
+        ✨ Extracting meaningful features from input images<br>
+3) 🏋️ Model Training<br>
+        Base Model: EfficientNetB0 (pretrained on ImageNet)<br>
+        Custom Classifier: Dense layers for final classification<br>
+4) 📊 Validation<br>
+        🔁 K-Fold Cross Validation for robust evaluation<br>
+5) 📈 Performance Evaluation<br>
+           ✅ Accuracy<br>
+           🎯 Precision<br>
+           🔁 Recall<br>
+           🏆 F1-Score<br>
 
-    <p>This project focuses on developing a deep learning model for the classification of various skin conditions using pretrained <strong>Convolutional Neural Networks (CNNs)</strong>, specifically <strong>EfficientNetB0</strong>, along with a custom classifier for feature extraction. The primary goal is to assist dermatologists and healthcare professionals by providing an AI-driven, efficient <strong>diagnostic tool</strong> for identifying skin diseases. 🤖</p>
-
-    <div class="section">
-        <h2>Diagnosed Classes</h2>
-        <ul>
-            <li>🌟 Light Diseases and Disorders of Pigmentation</li>
-            <li>😷 Acne and Rosacea Photos</li>
-            <li>🧬 Systemic Disease</li>
-            <li>🩸 Vascular Tumors</li>
-            <li>🌿 Atopic Dermatitis Photos</li>
-            <li>🩹 Bullous Disease Photos</li>
-            <li>🍄 Tinea, Ringworm, Candidiasis, and other Fungal Infections</li>
-            <li>🔴 Psoriasis Pictures, Lichen Planus, and Related Diseases</li>
-            <li>🧪 Melanoma, Skin Cancer, Nevi, and Moles</li>
-            <li>🐛 Scabies, Lyme Disease, and other Infestations and Bites</li>
-            <li>🧴 Eczema Photos</li>
-            <li>⚪ Seborrheic Keratoses and other Benign Tumors</li>
-            <li>🔬 Actinic Keratosis, Basal Cell Carcinoma, and other Malignant Lesions</li>
-            <li>🩹 Vasculitis Photos</li>
-            <li>🦠 Cellulitis, Impetigo, and other Bacterial Infections</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>🔄 Workflow</h2>
-        <ul>
-            <li>🗂 <strong>Data Preprocessing</strong>
-                <ul>
-                    <li>🧹 Cleaning raw data</li>
-                    <li>❓ Handling missing values</li>
-                    <li>🔄 Converting images from BGR → RGB</li>
-                </ul>
-            </li>
-            <li>🔍 <strong>Feature Extraction</strong>
-                <ul>
-                    <li>✨ Extracting meaningful features from input images</li>
-                </ul>
-            </li>
-            <li>🏋️ <strong>Model Training</strong>
-                <ul>
-                    <li><strong>Base Model:</strong> EfficientNetB0 (pretrained on ImageNet)</li>
-                    <li><strong>Custom Classifier:</strong> Dense layers for final classification</li>
-                </ul>
-            </li>
-            <li>📊 <strong>Validation</strong>
-                <ul>
-                    <li>🔁 K-Fold Cross Validation for robust evaluation</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-
-    <div class="section performance">
-        <h2>📊 Performance / Results</h2>
-        <ul>
-            <li>✅ <strong>Training Accuracy:</strong> 95.85%</li>
-            <li>✅ <strong>Testing Accuracy:</strong> 55.92%</li>
-            <li>🎯 <strong>Precision, Recall, F1-Score:</strong> Available per class in the confusion matrix</li>
-        </ul>
-        <p>📈 Plots:</p>
-        <img src="path_to_accuracy_plot.png" alt="Training and Validation Accuracy">
-        <img src="path_to_loss_plot.png" alt="Training and Validation Loss">
-    </div>
-
-    <div class="section">
-        <h2>🧑‍💻 Tech Stack</h2>
-        <ul>
-            <li>🐍 Python 3.10</li>
-            <li>🤖 TensorFlow / Keras (EfficientNetB0, custom classifier)</li>
-            <li>🔢 NumPy, Pandas, scikit-learn, OpenCV</li>
-            <li>📊 Matplotlib, Seaborn</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>🤝 Contributors</h2>
-        <ul>
-            <li>Heli Mevada (Team Leader)</li>
-            <li>Vishwa Parmar</li>
-            <li>Krisha Patel</li>
-            <li>Drashti Raiyani</li>
-        </ul>
-        <p><em>All team members contributed equally to the design, development, and implementation of this project.</em></p>
-    </div>
-
-</body>
-</html>
+🧑‍💻 Tech Stack<br>
+        🐍 Python 3.10<br>
+        🤖 TensorFlow / Keras (EfficientNetB0, custom classifier)<br>
+        🔢 NumPy, Pandas, scikit-learn, OpenCV<br>
+        📊 Matplotlib, Seaborn<br>
+📊 Performance / Results<br>
+        ✅ Training Accuracy: 95.85%<br>
+        ✅ Testing Accuracy: 55.92%<br>
+🤝 Contributors<br>
+        Heli Mevada (Team Leader)<br>
+        Vishwa Parmar<br>
+        Krisha Patel<br>
+        Drashti Raiyani<br>
