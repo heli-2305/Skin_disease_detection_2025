@@ -41,9 +41,11 @@ Steps in the Pipeline:<br>
         🤖 TensorFlow / Keras (EfficientNetB0, custom classifier)<br>
         🔢 NumPy, Pandas, scikit-learn, OpenCV<br>
         📊 Matplotlib, Seaborn<br>
+        
 📊 Performance / Results<br>
         ✅ Training Accuracy: 95.85%<br>
         ✅ Testing Accuracy: 55.92%<br>
+        
 🤝 Contributors<br>
         Heli Mevada (Team Leader)<br>
         Vishwa Parmar<br>
