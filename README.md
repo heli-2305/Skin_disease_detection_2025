@@ -47,7 +47,7 @@ Steps in the Pipeline:<br>
         ✅ Testing Accuracy: 55.92%<br>
         
 🤝 Contributors<br>
-        @heli-2305 (Team Leader)<br>
-        @vishwa-parmar-20<br>
-        @krishapatel5<br>
-        @Drashti105<br>
+        Heli Mevada (Team Leader) (https://github.com/heli-2305)
+        Vishwa Parmar (https://github.com/vishwa-parmar-20)
+        Krisha Patel (https://github.com/krishapatel5)
+        Drashti Raiyani (https://github.com/Drashti105)
