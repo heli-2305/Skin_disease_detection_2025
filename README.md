@@ -1,6 +1,6 @@
 🩺 Skin Disease Detection 2025
 This project focuses on developing a deep learning model for the classification of various skin conditions using pretrained Convolutional Neural Networks (CNNs), specifically EfficientNetB0, along with a custom classifier for feature extraction. The primary goal is to assist dermatologists and healthcare professionals by providing an AI-driven, efficient diagnostic tool for identifying skin diseases. 🤖
-The following classes are diagnosed:
+The following classes are diagnosed:<br>
         - 🌟 Light Diseases and Disorders of Pigmentation<br>
         - 😷 Acne and Rosacea Photos<br>
         - 🧬 Systemic Disease<br>
