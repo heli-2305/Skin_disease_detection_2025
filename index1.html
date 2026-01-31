@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SkinAI - AI Skin Analysis</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='index1.css') }}" />
+
+<style>
+html { scroll-behavior: smooth; }
+</style>
+</head>
+
+<body>
+<header>
+  <div class="logo">SkinAI</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#upload">Analyze</a>
+    <a href="#">About</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>AI-Powered <span>Skin Analysis</span></h1>
+    <p>
+      Upload a skin image and receive an AI-based prediction using deep learning.
+    </p>
+
+    <div class="buttons">
+      <button
+        class="start-btn"
+        type="button"
+        onclick="document.getElementById('upload').scrollIntoView({ behavior: 'smooth' })">
+        Start Analysis
+      </button>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="{{ url_for('static', filename='doctor-ai.png') }}" alt="AI Doctor" />
+  </div>
+</section>
+
+<section class="upload-section" id="upload">
+  <h2>Upload Skin Image</h2>
+
+  <div class="upload-box">
+    <div class="upload-icon">📷</div>
+    <p>Select an image or capture one using your camera</p>
+
+    <div class="upload-buttons">
+      <!-- File picker -->
+      <input type="file" id="fileUpload" accept="image/*" hidden />
+      <button type="button" onclick="document.getElementById('fileUpload').click()">
+        Choose File
+      </button>
+
+      <!-- Camera capture -->
+      <input type="file" id="cameraInput" accept="image/*" capture="environment" hidden />
+      <button type="button" onclick="document.getElementById('cameraInput').click()">
+        Take Photo
+      </button>
+    </div>
+
+    <button id="analyzeBtn" type="button" style="margin-top:15px;">
+      Analyze Image
+    </button>
+
+    <!-- Image preview -->
+    <img
+      id="previewImage"
+      style="display:none;margin-top:15px;max-width:250px;border-radius:8px;"
+      alt="Uploaded Preview"
+    />
+
+    <!-- Result -->
+    <p id="resultText" style="margin-top:15px;font-weight:bold;color:#12b6e8;"></p>
+
+    <small>📌 Upload clear, well-lit images for best results</small>
+  </div>
+</section>
+
+<section class="why-section">
+  <h2>About SkinAI</h2>
+  <p>
+    This project demonstrates how deep learning models can be used to classify skin conditions
+    from images for educational and research purposes.
+  </p>
+</section>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
